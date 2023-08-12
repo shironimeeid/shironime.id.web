@@ -119,25 +119,6 @@ export const AuthContextProvider = ({ children }) => {
             console.log(err)
         }
     }
-
-
-    useEffect(() => {
-        onAuthStateChanged(Auth, (user) => {
-            if (user) {
-                localStorage.setItem('user', JSON.stringify({
-                    username: user.displayName == null ? 'admin' : user.emailVerified,
-                    email: user.email,
-                    apiKey: user.apiKey,
-                    emailVerified: user.emailVerified,
-                }))
-                localStorage.setItem('isLogin', true)
-            } else {
-                swal('Info', "Tolong untuk Login Terlbih Dahulu", "info")
-            }
-        })
-    }, [])
-
-
     return (
         <AuthContext.Provider value={{ handleGoogleLogin, handleLogOut, setValue, value, handleSignUp, handleSignIn }}>{children}</AuthContext.Provider>
     );

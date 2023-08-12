@@ -25,7 +25,7 @@ const Navbar = () => {
                 <div className="w-[90%] md:w-[80%] m-auto flex justify-between items-center  md:h-[150px] py-6 md:py-2">
                     <div className="logo md:flex items-center md:justify-evenly md:gap-5">
                         <Link to='/'>
-                            <h1 className='font-outfits md:text-4xl font-black text-3xl text-[#f07e5c]'>shironime</h1>
+                            <h1 className='font-outfits md:text-4xl font-black text-3xl text-[#f07e5c]'>shironime.id</h1>
                         </Link>
                         <div className="menu hidden md:flex justify-evenly items-center w-[400px]">
                             <a href="" className='text-white text-sm font-medium hover:text-[#f07e5c] duration-200'>This Season</a>
